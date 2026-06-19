@@ -308,16 +308,10 @@ detective-demo/
   - `google/gemma-4-e4b` (or small model) for triple extraction
   - `text-embedding-nomic-embed-text-v1.5:2` for embeddings
 
----
+### Screenshots
 
-## License
-
-MIT
-
----
-
-## Credits
-
-Built by [Harish Kotra](https://harishkotra.me)
-
-Check out [other builds on DailyBuild](https://dailybuild.xyz)
+<img width="1976" height="3934" alt="screencapture-localhost-8501-2026-06-19-23_20_54" src="https://github.com/user-attachments/assets/c538dd5b-a618-4b99-9255-cce369d89e3f" />
+<img width="1976" height="3821" alt="screencapture-localhost-8501-2026-06-19-23_28_20" src="https://github.com/user-attachments/assets/d9e84195-cc1c-498a-a3f1-68462c05cfef" />
+<img width="1976" height="1277" alt="screencapture-localhost-8501-2026-06-19-23_27_35" src="https://github.com/user-attachments/assets/75db23e6-94f8-4476-8047-d3ae3f53525a" />
+<img width="1976" height="1855" alt="screencapture-localhost-8501-2026-06-19-23_28_04" src="https://github.com/user-attachments/assets/9218d745-62e8-4b08-bb4d-0cd01fc6b2b5" />
+<img width="1976" height="2459" alt="screencapture-localhost-8501-2026-06-19-23_28_10" src="https://github.com/user-attachments/assets/0ce1d611-35ae-43ad-8fb4-d18b8dfb0732" />
