@@ -1,0 +1,59 @@
+{
+  "D1": [
+    {"subject": "Detective Miller", "relation": "arrived_at", "object": "Pacific Heights mansion", "doc_id": "D1"},
+    {"subject": "Detective Miller", "relation": "arrived_at", "object": "10 PM", "doc_id": "D1"},
+    {"subject": "pearl necklace", "relation": "valued_at", "object": "$2 million", "doc_id": "D1"},
+    {"subject": "pearl necklace", "relation": "last_seen_in", "object": "master bedroom safe", "doc_id": "D1"}
+  ],
+  "D2": [
+    {"subject": "Mr. Blackwood", "relation": "reported", "object": "theft", "doc_id": "D2"},
+    {"subject": "Mr. Blackwood", "relation": "attended", "object": "charity gala", "doc_id": "D2"},
+    {"subject": "Mr. Blackwood", "relation": "had_alibi_from", "object": "7 PM", "doc_id": "D2"},
+    {"subject": "Mr. Blackwood", "relation": "had_alibi_until", "object": "10:30 PM", "doc_id": "D2"},
+    {"subject": "charity gala", "relation": "confirmed_by", "object": "gala host", "doc_id": "D2"}
+  ],
+  "D3": [
+    {"subject": "James Riley", "relation": "seen_near", "object": "mansion", "doc_id": "D3"},
+    {"subject": "James Riley", "relation": "seen_at", "object": "9:45 PM", "doc_id": "D3"},
+    {"subject": "James Riley", "relation": "claimed", "object": "checking irrigation system", "doc_id": "D3"}
+  ],
+  "D4": [
+    {"subject": "Victoria Crane", "relation": "visited", "object": "mansion", "doc_id": "D4"},
+    {"subject": "Victoria Crane", "relation": "arrived_at", "object": "8 PM", "doc_id": "D4"},
+    {"subject": "Victoria Crane", "relation": "left_at", "object": "9:30 PM", "doc_id": "D4"},
+    {"subject": "Victoria Crane", "relation": "argued_with", "object": "Mr. Blackwood", "doc_id": "D4"}
+  ],
+  "D5": [
+    {"subject": "pawn shop", "relation": "located_on", "object": "Lombard Street", "doc_id": "D5"},
+    {"subject": "woman", "relation": "tried_to_sell", "object": "pearl necklace", "doc_id": "D5"},
+    {"subject": "woman", "relation": "seen_at", "object": "11:30 PM", "doc_id": "D5"},
+    {"subject": "pearl necklace", "relation": "matched", "object": "stolen item", "doc_id": "D5"}
+  ],
+  "D6": [
+    {"subject": "Victoria Crane", "relation": "car_spotted_on", "object": "Lombard Street", "doc_id": "D6"},
+    {"subject": "Victoria Crane", "relation": "car_spotted_at", "object": "11:25 PM", "doc_id": "D6"},
+    {"subject": "Victoria Crane", "relation": "claimed", "object": "getting gas", "doc_id": "D6"}
+  ],
+  "D7": [
+    {"subject": "figure", "relation": "seen_in", "object": "master bedroom hallway", "doc_id": "D7"},
+    {"subject": "figure", "relation": "seen_at", "object": "9:15 PM", "doc_id": "D7"},
+    {"subject": "figure", "relation": "wearing", "object": "long coat", "doc_id": "D7"},
+    {"subject": "long coat", "relation": "worn_by", "object": "figure", "doc_id": "D7"}
+  ],
+  "D8": [
+    {"subject": "Victoria Crane", "relation": "lost", "object": "job", "doc_id": "D8"},
+    {"subject": "Victoria Crane", "relation": "facing", "object": "foreclosure", "doc_id": "D8"},
+    {"subject": "Mr. Blackwood", "relation": "refused_to_lend", "object": "money", "doc_id": "D8"},
+    {"subject": "Mr. Blackwood", "relation": "refused", "object": "Victoria Crane", "doc_id": "D8"}
+  ],
+  "D9": [
+    {"subject": "pawn shop owner", "relation": "identified", "object": "Victoria Crane", "doc_id": "D9"},
+    {"subject": "Victoria Crane", "relation": "identified_in", "object": "photo lineup", "doc_id": "D9"}
+  ],
+  "D10": [
+    {"subject": "Detective Miller", "relation": "found", "object": "long coat", "doc_id": "D10"},
+    {"subject": "long coat", "relation": "located_in", "object": "Victoria Crane's car trunk", "doc_id": "D10"},
+    {"subject": "long coat", "relation": "had", "object": "mud stains", "doc_id": "D10"},
+    {"subject": "mud stains", "relation": "matched", "object": "mansion's garden soil", "doc_id": "D10"}
+  ]
+}

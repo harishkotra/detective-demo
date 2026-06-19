@@ -1,6 +1,6 @@
 import chromadb
 import os
-from ollama_client import embed, llm_complete, DEFAULT_EMBED
+from ollama_client import embed, llm_complete
 
 CHROMA_DIR = os.path.join(os.path.dirname(__file__), "..", "chroma_db")
 COLLECTION_NAME = "detective_case"
@@ -13,8 +13,7 @@ def get_or_create_collection():
     except:
         pass
     collection = client.create_collection(
-        name=COLLECTION_NAME,
-        metadata={"hnsw:space": "cosine"}
+        name=COLLECTION_NAME, metadata={"hnsw:space": "cosine"}
     )
     return collection
 
@@ -23,27 +22,31 @@ def index_docs(docs: list[dict]):
     collection = get_or_create_collection()
     texts = [d["text"] for d in docs]
     ids = [d["id"] for d in docs]
-    embeddings = embed(texts, DEFAULT_EMBED)
+    embeddings = embed(texts)
     collection.add(
         ids=ids,
         documents=texts,
         metadatas=[{"title": d["title"]} for d in docs],
-        embeddings=embeddings
+        embeddings=embeddings,
     )
     return collection
 
 
 def retrieve(collection, query: str, top_k: int = 3) -> list[dict]:
-    q_emb = embed([query], DEFAULT_EMBED)[0]
+    q_emb = embed([query])[0]
     results = collection.query(query_embeddings=[q_emb], n_results=top_k)
     docs = []
     for i, doc_id in enumerate(results["ids"][0]):
-        docs.append({
-            "id": doc_id,
-            "text": results["documents"][0][i],
-            "title": results["metadatas"][0][i]["title"],
-            "score": results["distances"][0][i] if results.get("distances") else None
-        })
+        docs.append(
+            {
+                "id": doc_id,
+                "text": results["documents"][0][i],
+                "title": results["metadatas"][0][i]["title"],
+                "score": results["distances"][0][i]
+                if results.get("distances")
+                else None,
+            }
+        )
     return docs
 
 

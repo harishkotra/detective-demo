@@ -1,7 +1,11 @@
 from ollama_client import llm_complete
 
 
-def answer_with_retrieved(docs: list[dict], question: str, graph_trace: list[str] = None) -> str:
+def answer_with_retrieved(
+    docs: list[dict], question: str, graph_trace: list[str] = None
+) -> str:
+    if not docs:
+        return "No relevant documents retrieved."
     context = "\n\n".join(f"[{d['id']}] {d['text']}" for d in docs)
     trace_section = ""
     if graph_trace:

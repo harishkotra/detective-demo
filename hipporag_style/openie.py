@@ -18,9 +18,9 @@ Text: {text}
 
 def extract_triples(text: str, doc_id: str) -> list[dict]:
     prompt = TRIPLE_EXTRACTION_PROMPT.format(text=text)
-    raw = llm_complete(prompt, temperature=0, max_tokens=1024)
+    raw = llm_complete(prompt, model=None, temperature=0, max_tokens=2048)
 
-    json_match = re.search(r'(\[(?:.|\n)*?\])', raw)
+    json_match = re.search(r"(\[(?:.|\n)*?\])", raw)
     if not json_match:
         return []
     try:
@@ -41,8 +41,8 @@ Text: {text}
 
 def extract_entities(text: str) -> list[str]:
     prompt = ENTITY_EXTRACTION_PROMPT.format(text=text)
-    raw = llm_complete(prompt, temperature=0, max_tokens=512)
-    json_match = re.search(r'\[.*?\]', raw, re.DOTALL)
+    raw = llm_complete(prompt, model=None, temperature=0, max_tokens=1024)
+    json_match = re.search(r"\[.*?\]", raw, re.DOTALL)
     if not json_match:
         return []
     try:

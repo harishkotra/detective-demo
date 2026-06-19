@@ -9,9 +9,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from data import load_docs, load_queries
+from data import load_docs, load_queries, load_pre_extracted_triples
 from rag.rag_pipeline import index_docs, retrieve as rag_retrieve, answer as rag_answer
-from hipporag_style.openie import extract_triples
 from hipporag_style.graph_store import KnowledgeGraph
 from hipporag_style.retriever import retrieve_hipporag, trace_path
 from hipporag_style.qa import answer_with_retrieved as hipporag_answer
@@ -30,17 +29,13 @@ def run_comparison():
     print(f"  Indexed {len(docs)} documents\n")
 
     # ── Phase 2: Build Knowledge Graph (HippoRAG-style) ──
-    print("Extracting triples and building knowledge graph (HippoRAG)...")
-    all_triples = {}
-    for doc in docs:
-        print(f"  {doc['id']}: extracting triples...")
-        triples = extract_triples(doc["text"], doc["id"])
-        all_triples[doc["id"]] = triples
-        print(f"    → {len(triples)} triples")
-
+    print("Building knowledge graph from pre-extracted triples...")
+    all_triples = load_pre_extracted_triples()
     graph = KnowledgeGraph()
     graph.build_from_docs(docs, all_triples)
-    print(f"\n  Knowledge graph: {graph.num_nodes()} nodes, {graph.num_edges()} edges\n")
+    print(
+        f"\n  Knowledge graph: {graph.num_nodes()} nodes, {graph.num_edges()} edges\n"
+    )
 
     # ── Phase 3: Run queries through both systems ──
     for q in queries:
@@ -54,7 +49,7 @@ def run_comparison():
         for d in rag_docs:
             score_str = f" (score: {d['score']:.4f})" if d["score"] else ""
             print(f"  Retrieved: {d['id']} {score_str}")
-            print(f"    \"{d['text'][:80]}...\"")
+            print(f'    "{d["text"][:80]}..."')
         rag_result = rag_answer(rag_docs, q["question"])
         print(f"\n  Answer: {rag_result}\n")
 
@@ -64,7 +59,7 @@ def run_comparison():
         path = trace_path(graph, q["question"])
         for d in hippo_docs:
             print(f"  Retrieved: {d['id']} (score: {d['score']:.6f})")
-            print(f"    \"{d['text'][:80]}...\"")
+            print(f'    "{d["text"][:80]}..."')
         if path:
             print("\n  Graph traversal path:")
             for line in path:
@@ -79,6 +74,9 @@ def run_comparison():
     print(SEPARATOR)
     print("DEMO COMPLETE")
     print(SEPARATOR)
+    print()
+    print("Built by Harish Kotra (https://harishkotra.me)")
+    print("Check out more builds at https://dailybuild.xyz")
 
 
 if __name__ == "__main__":
