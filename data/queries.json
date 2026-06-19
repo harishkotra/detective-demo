@@ -1,0 +1,44 @@
+[
+  {
+    "id": "Q1",
+    "question": "What time did Detective Miller arrive at the mansion?",
+    "type": "simple",
+    "supporting_docs": ["D1"],
+    "expected_answer": "10 PM"
+  },
+  {
+    "id": "Q2",
+    "question": "What is the value of the stolen necklace?",
+    "type": "simple",
+    "supporting_docs": ["D1"],
+    "expected_answer": "$2 million"
+  },
+  {
+    "id": "Q3",
+    "question": "Where was Mr. Blackwood during the night of the theft?",
+    "type": "simple",
+    "supporting_docs": ["D2"],
+    "expected_answer": "At a charity gala from 7 PM to 10:30 PM"
+  },
+  {
+    "id": "Q4",
+    "question": "Who had both a motive and the opportunity to steal the pearl necklace?",
+    "type": "multi-hop",
+    "supporting_docs": ["D4", "D7", "D8"],
+    "expected_answer": "Victoria Crane"
+  },
+  {
+    "id": "Q5",
+    "question": "How does the evidence timeline from 9:15 PM to 11:30 PM connect Victoria Crane to the crime?",
+    "type": "multi-hop",
+    "supporting_docs": ["D5", "D6", "D7", "D10"],
+    "expected_answer": "Victoria Crane was seen on security footage in the hallway at 9:15 PM (opportunity). Her car was on Lombard Street at 11:25 PM, and the pawn shop reported her trying to sell the necklace at 11:30 PM. A long coat matching the security footage was found in her trunk."
+  },
+  {
+    "id": "Q6",
+    "question": "Given the timing of events, the suspect's circumstances, and the physical evidence, who is the most likely thief?",
+    "type": "multi-hop",
+    "supporting_docs": ["D4", "D5", "D6", "D7", "D8", "D9", "D10"],
+    "expected_answer": "Victoria Crane"
+  }
+]

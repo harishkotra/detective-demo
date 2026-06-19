@@ -1,0 +1,52 @@
+[
+  {
+    "id": "D1",
+    "title": "Detective's Arrival",
+    "text": "Detective Miller arrived at the Pacific Heights mansion at 10 PM. The pearl necklace, valued at $2 million, was last seen in the master bedroom safe."
+  },
+  {
+    "id": "D2",
+    "title": "Mr. Blackwood's Alibi",
+    "text": "Mr. Blackwood, the owner, reported the theft at 11 PM. He had been at a charity gala from 7 PM to 10:30 PM. His alibi was confirmed by the gala host."
+  },
+  {
+    "id": "D3",
+    "title": "Groundskeeper's Statement",
+    "text": "The groundskeeper, James Riley, was seen near the mansion at 9:45 PM. He claimed he was checking the irrigation system."
+  },
+  {
+    "id": "D4",
+    "title": "Victoria Crane's Visit",
+    "text": "Mrs. Blackwood's sister, Victoria Crane, visited the mansion at 8 PM for dinner. She left at 9:30 PM, visibly upset after an argument with Mr. Blackwood."
+  },
+  {
+    "id": "D5",
+    "title": "Pawn Shop Report",
+    "text": "A pawn shop on Lombard Street reported a woman trying to sell a pearl necklace at 11:30 PM. The description matched the stolen item."
+  },
+  {
+    "id": "D6",
+    "title": "License Plate Sighting",
+    "text": "Victoria Crane's car was spotted on Lombard Street at 11:25 PM on the night of the theft. She claims she was getting gas."
+  },
+  {
+    "id": "D7",
+    "title": "Security Footage",
+    "text": "The mansion's security footage showed a figure in the master bedroom hallway at 9:15 PM. The figure was wearing a long coat, despite the warm evening."
+  },
+  {
+    "id": "D8",
+    "title": "Victoria's Financial Trouble",
+    "text": "Victoria Crane had recently lost her job and was facing foreclosure on her home. Mr. Blackwood had refused to lend her money."
+  },
+  {
+    "id": "D9",
+    "title": "Photo Lineup",
+    "text": "The pawn shop owner identified Victoria Crane from a photo lineup as the woman who attempted to sell the pearl necklace."
+  },
+  {
+    "id": "D10",
+    "title": "The Long Coat",
+    "text": "Detective Miller found a long coat in Victoria Crane's car trunk. The coat had mud stains matching the mansion's garden soil."
+  }
+]
